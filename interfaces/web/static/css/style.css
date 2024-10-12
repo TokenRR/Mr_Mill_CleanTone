@@ -1,0 +1,48 @@
+body {
+    background-color: #0F0F0F;  /* Set background to the new color */
+    color: #0F0F0F;  /* Ensure text is readable on the darker background */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #0F0F0F;  /* White background for containers if required */
+}
+
+/* Styling the drag-and-drop area */
+#drop-area {
+    border: 2px dashed #444342;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    color: #0F0F0F;
+    margin-top: 20px;
+    background-color: #444342; /* Lighter color for the drop area */
+    width: 100%;  /* Expand to full width */
+    height: 300px; /* Expand height */
+}
+
+/* Highlight the drag-and-drop area when hovering */
+#drop-area:hover,
+#drop-area.active {
+    border-color: #007bff;
+    background-color: #444342;
+}
+
+.btn-warning {
+    background-color: #ffb700;
+    color: #121212;
+    border-color: #ffb700;
+}
+
+footer {
+    background-color: #444342 !important;  /* Force background color change */
+    color: #ce2929;
+    padding: 10px;
+    margin-top: 40px;
+    border-top: 1px solid #444342;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #0F0F0F;  /* Ensure footer text is light */
+}
