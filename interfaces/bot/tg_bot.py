@@ -2,6 +2,7 @@ import telebot
 from telebot import types
 from tg_bot_config import TOKEN, WHITE_LIST, TRANSLATIONS
 
+
 # Initialize the bot
 bot = telebot.TeleBot(TOKEN)
 
