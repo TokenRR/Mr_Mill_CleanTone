@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ translations.page_title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container mt-3">
+        <!-- Header with Return to Main Page -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>My Account</h2>
+            <form method="GET" action="{{ url_for('index') }}">
+                <button type="submit" class="btn btn-secondary">{{ translations.Return_to_Main_Page }}</button>
+            </form>
+        </div>
+
+        <!-- User Account Details -->
+        <div class="mt-4">
+            <h2>{{ translations.my_account }}</h2>
+            <p><strong>{{ translations.username }}:</strong> {{ username }}</p>
+            <p><strong>{{ translations.password }}:</strong> {{ password }}</p>
+            <p><strong>{{ translations.selected_plan }}:</strong> {{ selected_plan }}</p>
+        </div>
+
+        <!-- 300px Indentation -->
+        <div style="height: 100px;"></div>
+
+        <!-- Developer Text Instead of Footer -->
+        <div class="text-center mt-5" style="color:#FFFFFF">
+            <p>Developers team:</p>
+            <p><img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">nikita@gmail.com &nbsp;&nbsp; 
+                <img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">alina@gmail.com &nbsp;&nbsp; 
+                <img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">danilo@gmail.com</p>
+            <p>&copy; 2024 Mr. Mill CleanTone</p>
+        </div>
+    </div>
+</body>
+</html>

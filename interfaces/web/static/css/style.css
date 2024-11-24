@@ -1,11 +1,16 @@
-body {
-    background-color: #0F0F0F;  /* Set background to the new color */
-    color: #0F0F0F;  /* Ensure text is readable on the darker background */
+html, body {
+    height: 100%; /* Ensure the body covers the full height of the viewport */
+    margin: 0;
+    background-color: #0F0F0F; /* Set consistent background color */
+    color: #FFFFFF; /* Set default text color */
     font-family: Arial, sans-serif;
 }
 
 .container {
-    background-color: #0F0F0F;  /* White background for containers if required */
+    min-height: 100%; /* Ensure the content stretches the full height of the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Styling the drag-and-drop area */
@@ -35,8 +40,7 @@ body {
 }
 
 footer {
-    background-color: #444342 !important;  /* Force background color change */
-    color: #ce2929;
+    background-color: #444342;
     padding: 10px;
     margin-top: 40px;
     border-top: 1px solid #444342;
@@ -44,5 +48,29 @@ footer {
 
 footer p {
     font-size: 0.8rem;
-    color: #0F0F0F;  /* Ensure footer text is light */
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
 }

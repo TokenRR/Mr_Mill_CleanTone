@@ -10,6 +10,27 @@
 </head>
 <body>
     <div class="container mt-3">
+        <div class="d-flex justify-content-between">
+            {% if 'username' not in session %}
+                <form method="GET" action="{{ url_for('register') }}">
+                    <button type="submit" class="btn btn-primary">{{ translations.registration }}</button>
+                </form>
+                <form method="GET" action="{{ url_for('login') }}">
+                    <button type="submit" class="btn btn-secondary">{{ translations.login }}</button>
+                </form>
+            {% else %}
+                <form method="GET" action="{{ url_for('logout') }}">
+                    <button type="submit" class="btn btn-danger">{{ translations.logout }}</button>
+                </form>
+                <form method="GET" action="{{ url_for('my_account') }}">
+                    <button type="submit" class="btn btn-info">{{ translations.my_account }}</button>
+                </form>
+            {% endif %}
+        </div>        
+
+        <!-- 10px Indentation -->
+        <div style="height: 10px;"></div>
+
         <!-- Language Switch Row -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div class="d-flex align-items-center">
@@ -58,8 +79,8 @@
         <div class="text-center mt-5" style="color:#FFFFFF">
             <p>Developers team:</p>
             <p><img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">nikita@gmail.com &nbsp;&nbsp; 
-                <img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">alina@gmail.com &nbsp;&nbsp; 
-                <img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">daniel@gmail.com</p>
+               <img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">alina@gmail.com &nbsp;&nbsp; 
+               <img src="{{ url_for('static', filename='images/gmail_logo.png') }}" width="30" alt="Gmail Logo">danilo@gmail.com</p>
             <p>&copy; 2024 Mr. Mill CleanTone</p>
         </div>
     </div>
